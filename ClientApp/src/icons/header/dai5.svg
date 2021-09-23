@@ -7,7 +7,7 @@
 	.st0{fill:url(#gradient0);}
 	.st1{fill:#F15A24;}
 	.st2{fill:url(#gradient1);}
-	.st3{fill:#5E5E5E;}
+	.st3{fill:#ffffff;}
 	}
 @media (prefers-color-scheme: dark) {
 	.st0{fill:url(#gradient0);}

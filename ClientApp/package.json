@@ -17,8 +17,10 @@
     "useTabs": false
   },
   "dependencies": {
+    "@types/react-helmet": "^6.1.2",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
+    "react-helmet": "^6.1.0",
     "react-query": "^3.24.2",
     "react-router": "^5.2.1",
     "react-router-dom": "^5.3.0"
