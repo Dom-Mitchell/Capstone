@@ -1,4 +1,4 @@
-# react-project-template
+# NP Travels
 
 ## Assignment
 

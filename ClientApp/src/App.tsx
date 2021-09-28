@@ -1,7 +1,7 @@
 import React from 'react'
 import { Slideshow } from './components/slideshow'
 // import './css/homeHeader.scss'
-import logo from './icons/header/dai5.svg'
+import logo from './images/daitree6.svg'
 // import monk from './icons/footer/favicon.png'
 // import { SignIn } from './pages/SignIn'
 
@@ -104,12 +104,11 @@ export function App() {
       <Slideshow />
       {/* <SignIn /> */}
 
-      <footer>
-        {/* <img src={monk} alt="Monk" /> */}
+      {/* <footer>
         <p>
-          <q>THE MOUNTAINS ARE CALLING and I must go.</q> - John Muir
+          <q>The mountains are calling and I must go.</q> - John Muir
         </p>
-      </footer>
+      </footer> */}
     </>
   )
 }

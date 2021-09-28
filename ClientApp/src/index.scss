@@ -284,10 +284,11 @@ footer::after {
 
 .slideshow-container {
   position: relative;
+  text-align: center;
 }
 
 .slide {
-  display: none;
+  // display: none;
   animation-name: fade;
   animation-duration: 1.5s;
 }
@@ -309,6 +310,40 @@ footer::after {
   position: absolute;
   top: 0;
 }
+
+// .slide-numbertext img {
+//   width: 100%;
+//   // max-width: 100%;
+//   height: 300px;
+//   display: block;
+//   position: relative;
+// }
+
+// .slide-numbertext img::before {
+//   background-color: hsl(0, 0%, 93.3%);
+//   border: 1px dashed hsl(0, 0%, 66.7%);
+//   height: 100%;
+//   display: block;
+//   content: '';
+//   position: absolute;
+//   width: 100%;
+// }
+
+// .slide-numbertext img::after {
+//   font-weight: bold;
+//   position: absolute;
+//   height: 100%;
+//   left: 0px;
+//   text-align: center;
+//   top: 1px;
+//   width: 100%;
+// }
+
+// .slide-numbertext img[alt] {
+//   text-align: center;
+//   font-weight: bold;
+//   color: hsl(0, 0%, 60%);
+// }
 
 .slide-dots {
   text-align: center;
