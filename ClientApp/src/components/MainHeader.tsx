@@ -2,7 +2,7 @@ import React from 'react'
 import logo from './icons/header/dai5.svg'
 import '../css/homeHeader.scss'
 
-export function mainHeader() {
+export function MainHeader() {
   return (
     <>
       <header id="main-header">
