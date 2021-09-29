@@ -1,25 +1,19 @@
 import React, { useEffect, useState } from 'react'
+import '../css/slideshow.scss'
 
 export function Slideshow() {
   const slideCount = 3
   const [slideIndex, setSlideIndex] = useState(0)
 
-  useEffect(
-    function () {
-      const timeOutId = setTimeout(
-        () =>
-          function () {
-            setSlideIndex((slideIndex) => (slideIndex + 1) % slideCount)
-          },
-        3000
-      ) // Change image every 3 seconds
+  useEffect(() => {
+    const timeOutId = setInterval(() => {
+      setSlideIndex((slideIndex) => (slideIndex + 1) % slideCount)
+    }, 3000) // Change image every 3 seconds
 
-      return function () {
-        clearInterval(timeOutId)
-      }
-    },
-    [slideCount]
-  )
+    return () => {
+      clearInterval(timeOutId)
+    }
+  }, [slideCount])
 
   // useEffect(() => {
   //   let slideIndex = 0
@@ -61,10 +55,7 @@ export function Slideshow() {
           style={{ display: slideIndex === 0 ? undefined : 'none' }}
         >
           <div className="slide-numbertext">1 / 3</div>
-          <img
-            src="https://cdn.mos.cms.futurecdn.net/5FmFtc974AjN255w6iELLj-1024-80.jpg.webp"
-            alt="Test Image 1"
-          />
+          <img src="#" alt="Test Image 1" />
           <div className="slide-caption">Image 1</div>
         </div>
 
@@ -73,10 +64,7 @@ export function Slideshow() {
           style={{ display: slideIndex === 1 ? undefined : 'none' }}
         >
           <div className="slide-numbertext">2 / 3</div>
-          <img
-            src="https://i.pinimg.com/564x/29/5e/f1/295ef10b18da247705c6dbcc373020cd.jpg"
-            alt="Test Image 2"
-          />
+          <img src="#" alt="Test Image 2" />
           <div className="slide-caption">Image 2</div>
         </div>
 
@@ -85,18 +73,24 @@ export function Slideshow() {
           style={{ display: slideIndex === 2 ? undefined : 'none' }}
         >
           <div className="slide-numbertext">3 / 3</div>
-          <img src="http://placekitten.com/200/200" alt="Test Image 3" />
+          <img src="#" alt="Test Image 3" />
           <div className="slide-caption">Image 3</div>
         </div>
       </div>
 
       <div className="slide-dots">
-        {/* <span className={{slideIndex === 0 ? 'slide-active' : 'slide-dot'}}</span> */}
-        <span className="slide-dot"></span>
-        {/* <span className={{slideIndex === 1 ? 'slide-active' : 'slide-dot'}}</span> */}
-        <span className="slide-dot"></span>
-        {/* <span className={{slideIndex === 2 ? 'slide-active' : 'slide-dot'}}</span> */}
-        <span className="slide-dot"></span>
+        <span
+          className={slideIndex === 0 ? 'slide-dot slide-active' : 'slide-dot'}
+        ></span>
+        {/* <span className="slide-dot"></span> */}
+        <span
+          className={slideIndex === 1 ? 'slide-dot slide-active' : 'slide-dot'}
+        ></span>
+        {/* <span className="slide-dot"></span> */}
+        <span
+          className={slideIndex === 2 ? 'slide-dot slide-active' : 'slide-dot'}
+        ></span>
+        {/* <span className="slide-dot"></span> */}
       </div>
     </>
   )
