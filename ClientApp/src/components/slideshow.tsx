@@ -15,38 +15,6 @@ export function Slideshow() {
     }
   }, [slideCount])
 
-  // useEffect(() => {
-  //   let slideIndex = 0
-
-  //   const showSlides = () => {
-  //     let i
-  //     //                                                         ask Gavin about type
-  //     const slides = document.getElementsByClassName('slide')
-  //     // const slides = document.getElementsByClassName('slide') as any
-  //     const dots = document.getElementsByClassName('slide-dot')
-
-  //     for (i = 0; i < slides.length; i++) {
-  //       const element = slides[i] as HTMLDivElement
-  //       element.style.display = 'none'
-  //     }
-  //     slideIndex++
-
-  //     if (slideIndex > slides.length) {
-  //       slideIndex = 1
-  //     }
-
-  //     for (i = 0; i < dots.length; i++) {
-  //       dots[i].className = dots[i].className.replace(' slide-active', '')
-  //     }
-
-  //     slides[slideIndex - 1].style.display = 'block'
-  //     dots[slideIndex - 1].className += ' slide-active'
-  //     setTimeout(showSlides, 3000) // Change image every 3 seconds
-  //   }
-
-  //   showSlides()
-  // }, [])
-
   return (
     <>
       <div className="slideshow-container">
@@ -82,15 +50,12 @@ export function Slideshow() {
         <span
           className={slideIndex === 0 ? 'slide-dot slide-active' : 'slide-dot'}
         ></span>
-        {/* <span className="slide-dot"></span> */}
         <span
           className={slideIndex === 1 ? 'slide-dot slide-active' : 'slide-dot'}
         ></span>
-        {/* <span className="slide-dot"></span> */}
         <span
           className={slideIndex === 2 ? 'slide-dot slide-active' : 'slide-dot'}
         ></span>
-        {/* <span className="slide-dot"></span> */}
       </div>
     </>
   )
