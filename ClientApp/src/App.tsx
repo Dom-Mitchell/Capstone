@@ -1,9 +1,8 @@
 import React from 'react'
-import { Slideshow } from './components/slideshow'
-// import './css/homeHeader.scss'
+// import { Slideshow } from './components/slideshow'
 import logo from './images/daitree6.svg'
+import { SignIn } from './pages/SignIn'
 // import monk from './icons/footer/favicon.png'
-// import { SignIn } from './pages/SignIn'
 
 export function App() {
   return (
@@ -101,8 +100,8 @@ export function App() {
         </div>
       </section> */}
 
-      <Slideshow />
-      {/* <SignIn /> */}
+      {/* <Slideshow /> */}
+      <SignIn />
 
       <footer>
         <p>

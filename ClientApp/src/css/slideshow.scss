@@ -1,8 +1,5 @@
 .slideshow-container {
-  // position: relative;
-  // text-align: center;
   display: flex;
-  align-content: center;
   justify-content: center;
   padding: 10px;
   margin: 10px;
@@ -10,7 +7,6 @@
 }
 
 .slide {
-  // display: none;
   animation-name: fade;
   animation-duration: 1.5s;
 }
@@ -18,10 +14,7 @@
 .slide-caption {
   // color: #f2f2f2;
   font-size: 15px;
-  // padding: 8px 12px;
-  // position: absolute;
-  // bottom: 8px;
-  transform: translateY(-40px);
+  transform: translateY(-30px);
   width: 100%;
   text-align: center;
 }
@@ -29,10 +22,8 @@
 .slide-numbertext {
   // color: #f2f2f2;
   font-size: 12px;
-  // padding: 8px 12px;
   position: absolute;
-  // top: 0;
-  transform: translateY(5px);
+  transform: translate(10px, 5px);
   z-index: 1;
 }
 
@@ -47,6 +38,7 @@ img {
   text-align: center;
 }
 
+// Styling for if image link is broken
 img::before {
   background-color: hsl(0, 0%, 93.3%);
   border: 1px dashed hsl(0, 0%, 66.7%);
@@ -55,6 +47,7 @@ img::before {
   content: '';
   position: absolute;
   width: 100%;
+  border-radius: 4px;
 }
 
 img::after {
@@ -66,8 +59,6 @@ img::after {
   text-align: center;
   top: 1px;
   width: 100%;
-  // transform: translateY(80px);
-  // z-index: 1;
 }
 
 img[alt] {
@@ -78,6 +69,7 @@ img[alt] {
 
 .slide-dots {
   text-align: center;
+  transform: translateY(-30px);
 }
 
 .slide-dot {
