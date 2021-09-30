@@ -2,11 +2,12 @@ import React from 'react'
 import { FormImage } from '../components/FormImage'
 import { RelativeFooter } from '../components/RelativeFooter'
 // import title from '../images/title.png'
+import user from '../images/form/green-user.svg'
 import envelope from '../images/form/envelope.svg'
 import lock from '../images/form/lock.svg'
-import '../css/signIn.scss'
+import '../css/createAccount.scss'
 
-export function SignIn() {
+export function CreateAccount() {
   return (
     <>
       <div className="form-container">
@@ -143,10 +144,26 @@ export function SignIn() {
                   <g></g>
                 </svg>
               </a>
-              <h1>Sign In</h1>
+              <h1>Create Account</h1>
             </nav>
 
             <form action="#">
+              <div
+                className="form-input validate-form-input"
+                data-validate="Name is required"
+              >
+                <input
+                  className="form-name"
+                  type="text"
+                  name="name"
+                  placeholder="Full Name"
+                />
+                <span className="focus-name"></span>
+                <span className="name-icon">
+                  <img className="green-user" src={user} aria-hidden="true" />
+                </span>
+              </div>
+
               <div
                 className="form-input validate-form-input"
                 data-validate="Valid email is required: ex@abc.xyz"

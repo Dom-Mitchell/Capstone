@@ -376,29 +376,29 @@ footer::after {
 // }
 
 // Sign In CSS
-.page nav {
-  display: flex;
-}
+// .page nav {
+//   display: flex;
+// }
 
-.page nav a,
-.page nav h2 {
-  font-size: 1.5rem;
-  margin: 1rem 0.5rem 1rem 0;
-}
+// .page nav a,
+// .page nav h2 {
+//   font-size: 1.5rem;
+//   margin: 1rem 0.5rem 1rem 0;
+// }
 
-.page nav > * + *::before {
-  content: '>';
-  margin-right: 0.5rem;
-}
+// .page nav > * + *::before {
+//   content: '>';
+//   margin-right: 0.5rem;
+// }
 
-.sign-in {
-  padding: 10px;
-  margin: 10px;
-  border-radius: 15px;
-  border: 3px solid black;
-  justify-content: center;
-  align-items: center;
-  height: 80%;
-  display: flex;
-  margin-top: 20px;
-}
+// .sign-in {
+//   padding: 10px;
+//   margin: 10px;
+//   border-radius: 15px;
+//   border: 3px solid black;
+//   justify-content: center;
+//   align-items: center;
+//   height: 80%;
+//   display: flex;
+//   margin-top: 20px;
+// }

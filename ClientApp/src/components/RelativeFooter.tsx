@@ -1,7 +1,7 @@
 import React from 'react'
-import '../css/homeFooter.scss'
+import '../css/relativeFooter.scss'
 
-export function MainFooter() {
+export function RelativeFooter() {
   return (
     <>
       <footer>

@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './icons/header/dai5.svg'
+import logo from '../images/daitree6.svg'
 import '../css/homeHeader.scss'
 
 export function MainHeader() {

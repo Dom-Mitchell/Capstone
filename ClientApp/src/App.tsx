@@ -1,8 +1,10 @@
 import React from 'react'
 // import { Slideshow } from './components/slideshow'
-import { SignIn } from './pages/SignIn'
-import { MainFooter } from './components/MainFooter'
+// import { SignIn } from './pages/SignIn'
+import { CreateAccount } from './pages/CreateAccount'
 import { MainHeader } from './components/MainHeader'
+// import { MainFooter } from './components/AbsoluteFooter'
+// import { FormImage } from './components/FormImage'
 
 export function App() {
   return (
@@ -11,10 +13,12 @@ export function App() {
       <MainHeader />
 
       {/* <Slideshow /> */}
-      <SignIn />
+      {/* <FormImage/> */}
+      {/* <SignIn /> */}
+      <CreateAccount />
 
       {/* Footer */}
-      <MainFooter />
+      {/* <MainFooter /> */}
     </>
   )
 }

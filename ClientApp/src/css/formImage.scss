@@ -1,0 +1,147 @@
+.form-image {
+  // height: fit-content;
+  // width: auto;
+  height: 500px;
+  width: 700px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  // overflow: hidden;
+}
+
+.white-circle {
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 1;
+}
+
+.laptop {
+  height: 300px;
+  width: 300px;
+  z-index: 2;
+  transform: translateY(-400px);
+}
+
+.user {
+  height: 75px;
+  width: 75px;
+  z-index: 3;
+  transform: translateY(-620px);
+}
+
+.blue-circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: white;
+  transform: translate(-300px, -775px);
+}
+
+@keyframes rotateAnimationBlueCircle {
+  from {
+    transform: translate(-300px, -775px) rotate(0deg);
+  }
+  to {
+    transform: translate(-300px, -775px) rotate(360deg);
+  }
+}
+
+.form-image:hover > .blue-circle {
+  animation: rotateAnimationBlueCircle 3s linear infinite;
+}
+
+.fancy-triangle {
+  height: 50px;
+  width: 50px;
+  z-index: 1;
+  background-color: white;
+  transform: translate(300px, -800px);
+  clip-path: polygon(6% -8%, 7% 108%, 100% 50%);
+}
+
+.fancy-triangle img {
+  height: 50px;
+  width: 50px;
+  transform: rotate(90deg);
+  z-index: 2;
+}
+
+@keyframes rotateAnimationFancyTriangle {
+  from {
+    transform: translate(300px, -800px) rotate(0deg);
+  }
+  to {
+    transform: translate(300px, -800px) rotate(360deg);
+  }
+}
+
+.form-image:hover > .fancy-triangle {
+  animation: rotateAnimationFancyTriangle 3s linear infinite;
+}
+
+.red-circle {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: white;
+  transform: translate(250px, -550px);
+}
+
+@keyframes rotateAnimationRedCircle {
+  from {
+    transform: translate(250px, -550px) rotate(0deg);
+  }
+  to {
+    transform: translate(250px, -550px) rotate(360deg);
+  }
+}
+
+.form-image:hover > .red-circle {
+  animation: rotateAnimationRedCircle 3s linear infinite;
+}
+
+.abstract-triangle {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  transform: translate(-250px, -600px);
+  clip-path: polygon(52% 0%, -9% 92%, 110% 92%);
+}
+
+@keyframes rotateAnimationAbstractTriangle {
+  from {
+    transform: translate(-250px, -600px) rotate(0deg);
+  }
+  to {
+    transform: translate(-250px, -600px) rotate(360deg);
+  }
+}
+
+.form-image:hover > .abstract-triangle {
+  animation: rotateAnimationAbstractTriangle 3s linear infinite;
+}
+
+.square {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  transform: translate(150px, -1080px);
+  border-radius: 5px;
+}
+
+@keyframes rotateAnimationSquare {
+  from {
+    transform: translate(150px, -1080px) rotate(0deg);
+  }
+  to {
+    transform: translate(150px, -1080px) rotate(360deg);
+  }
+}
+
+.form-image:hover > .square {
+  animation: rotateAnimationSquare 3s linear infinite;
+}

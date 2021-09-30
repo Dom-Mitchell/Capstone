@@ -1,0 +1,239 @@
+.form-container {
+  display: flex;
+}
+
+main {
+  padding: 20px;
+  margin: 10px;
+}
+
+.create-account-container {
+  width: 100%;
+  padding: 60px;
+  margin: 20px;
+}
+
+.create-account-container nav {
+  display: flex;
+  padding-left: 30px;
+}
+
+.create-account-container nav a,
+.create-account-container nav h1 {
+  font-size: 2rem;
+  margin: 1rem 0.5rem 1rem 0;
+}
+
+.create-account-container nav > * + *::before {
+  content: '>';
+  margin-right: 0.5rem;
+}
+
+.create-account-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50px;
+  align-items: center;
+}
+
+.form-input {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  width: fit-content;
+}
+
+.validate-form-input {
+  position: relative;
+}
+
+.validate-form-input::before {
+  content: attr(data-validate);
+  position: absolute;
+  max-width: 70%;
+  background-color: white;
+  border: 1px solid #c80000;
+  border-radius: 13px;
+  padding: 4px 25px 4px 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 8px;
+  pointer-events: none;
+
+  color: #c80000;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: left;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.validate-form-input:hover::before {
+  visibility: visible;
+  opacity: 1;
+}
+
+.validate-form-input::after {
+  content: url('../images/form/caution.svg');
+  height: 25px;
+  display: block;
+  position: absolute;
+  color: #c80000;
+  font-size: 15px;
+  top: 50%;
+  transform: translate(323px, -95%) scale(0.035);
+  right: 13px;
+}
+
+.green-user,
+.envelope,
+.lock {
+  height: 25px;
+  width: 25px;
+}
+
+.form-name,
+.form-email,
+.form-password {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666666;
+  display: block;
+  width: 250px;
+  background: #e6e6e6;
+  height: 50px;
+  border-radius: 25px;
+  padding: 0 30px 0 68px;
+  outline: none;
+  border: none;
+}
+
+.form-name textarea,
+.form-email textarea,
+.form-password textarea {
+  outline: none;
+  border: none;
+}
+
+.form-name textarea:focus,
+.form-name:focus,
+.form-email textarea:focus,
+.form-email:focus,
+.form-password textarea:focus,
+.form-password:focus {
+  border-color: transparent;
+}
+
+.form-name:focus::placeholder,
+.form-email:focus::placeholder,
+.form-password:focus::placeholder {
+  color: transparent;
+}
+
+.form-name::placeholder,
+.form-email::placeholder,
+.form-password::placeholder {
+  color: #999999;
+}
+
+.form-name textarea:focus::placeholder,
+.form-email textarea:focus::placeholder,
+.form-password textarea:focus::placeholder {
+  color: transparent;
+}
+
+.form-name textarea::placeholder,
+.form-email textarea::placeholder,
+.form-password textarea::placeholder {
+  color: #999999;
+}
+
+// Formatting for Form Email/Password
+.focus-name,
+.focus-email,
+.focus-password {
+  display: block;
+  position: absolute;
+  border-radius: 25px;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0;
+  color: rgba(87, 184, 70, 0.8);
+}
+
+@keyframes anim-shadow {
+  to {
+    box-shadow: 0px 0px 70px 25px;
+    opacity: 0;
+  }
+}
+
+.form-name:focus + .focus-name,
+.form-email:focus + .focus-email,
+.form-password:focus + .focus-password {
+  animation: anim-shadow 0.5s ease-in-out forwards;
+}
+
+.name-icon,
+.email-icon,
+.password-icon {
+  position: absolute;
+  pointer-events: none;
+  transform: translate(30px, -35px);
+  color: #666;
+  transition: all 0.4s;
+  filter: grayscale(100%) opacity(0.7);
+}
+
+.form-name:focus + .focus-name + .name-icon,
+.form-email:focus + .focus-email + .email-icon,
+.form-password:focus + .focus-password + .password-icon {
+  filter: grayscale(0%) opacity(1);
+}
+
+.create-account-container button {
+  margin-left: 20px;
+}
+
+.create-account-container button p {
+  margin: 0px;
+}
+
+.create-account-button,
+.create-account-page-button button {
+  background: #57b846;
+  cursor: pointer;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+}
+
+.create-account-button p,
+.create-account-page-button button {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.create-account-button:hover,
+.create-account-page-button button:hover {
+  background: #333333;
+}
+
+.create-account-page-button {
+  padding: 0;
+  margin: 0;
+}
