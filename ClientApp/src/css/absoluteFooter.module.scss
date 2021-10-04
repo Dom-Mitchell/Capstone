@@ -1,26 +1,26 @@
-footer img {
+.absolute-footer img {
   width: 50px;
   height: 50px;
 }
 
-footer {
+.absolute-footer {
   text-align: center;
-  padding: 3px;
+  padding: 3px 3px 0px 3px;
   background: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
   color: white;
   display: block;
-  position: relative;
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
 }
 
-footer svg {
+.absolute-footer svg {
   height: 50px;
   width: 50px;
 }
 
-footer::before {
+.absolute-footer::before {
   content: url('../icons/footer/mountains8.svg');
   line-height: 0;
   position: absolute;
@@ -30,7 +30,7 @@ footer::before {
   width: 72px;
 }
 
-footer::after {
+.absolute-footer::after {
   content: url('../icons/footer/bears.svg');
   line-height: 0;
   position: absolute;

@@ -7,43 +7,42 @@ import abstractTriangle from '../images/form/abstract-triangle.svg'
 import fancyTriangle from '../images/form/fancy-triangle.svg'
 import blueCircle from '../images/form/blue-circle.svg'
 import redCircle from '../images/form/red-circle.svg'
-import '../css/formImage.scss'
+import formImage from '../css/formImage.module.scss'
 
 export function FormImage() {
   return (
-    <div className="form-image">
-      <div className="white-circle">
+    <div className={formImage['form-image']}>
+      <div className={formImage['white-circle']}>
         <img src={whiteCircle} />
       </div>
 
-      <div className="laptop">
+      <div className={formImage['laptop']}>
         <img src={laptop} />
       </div>
 
-      <div className="user">
+      <div className={formImage['user']}>
         <img src={user} />
       </div>
 
-      <div className="blue-circle">
+      <div className={formImage['blue-circle']}>
         <img src={blueCircle} />
       </div>
 
-      <div className="fancy-triangle">
+      <div className={formImage['fancy-triangle']}>
         <img src={fancyTriangle} />
       </div>
 
-      <div className="red-circle">
+      <div className={formImage['red-circle']}>
         <img src={redCircle} />
       </div>
 
-      <div className="abstract-triangle">
+      <div className={formImage['abstract-triangle']}>
         <img src={abstractTriangle} />
       </div>
 
-      <div className="square">
+      <div className={formImage['square']}>
         <img src={square} />
       </div>
-
     </div>
   )
 }

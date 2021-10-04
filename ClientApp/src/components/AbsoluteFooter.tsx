@@ -1,10 +1,10 @@
 import React from 'react'
-import '../css/absoluteFooter.scss'
+import absoluteFooter from '../css/absoluteFooter.module.scss'
 
 export function AbsoluteFooter() {
   return (
     <>
-      <footer>
+      <footer className={absoluteFooter['absolute-footer']}>
         <p>
           <q>The mountains are calling and I must go.</q> - John Muir
         </p>
