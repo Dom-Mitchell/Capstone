@@ -1,9 +1,9 @@
 import React from 'react'
-import logo from '../icons/header/daitree6.svg'
+import logo from '../images/daitree6.svg'
 import '../css/homeHeader.scss'
 import { Link } from 'react-router-dom'
 
-export function MainHeader() {
+export function LoggedInHeader() {
   return (
     <>
       <header id="main-header">

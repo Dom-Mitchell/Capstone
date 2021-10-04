@@ -1,24 +1,38 @@
 import React from 'react'
-// import { Slideshow } from './components/slideshow'
-// import { SignIn } from './pages/SignIn'
+import { SignIn } from './pages/SignIn'
 import { CreateAccount } from './pages/CreateAccount'
+import { Route, Switch } from 'react-router'
+import { Home } from './pages/Home'
 import { MainHeader } from './components/MainHeader'
-// import { MainFooter } from './components/AbsoluteFooter'
-// import { FormImage } from './components/FormImage'
+import { MiniMap } from './pages/MiniMap'
 
 export function App() {
   return (
     <>
-      {/* Header */}
-      <MainHeader />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        {/* <Route exact path="/about"> */}
+        {/* <About /> */}
+        {/* </Route>
+        <Route exact path="/contact">
+      {/* // <Contact /> */}
+        {/* </Route> */}
+        <Route exact path="/signin">
+          <SignIn />
+        </Route>
+        <Route exact path="/createaccount">
+          <CreateAccount />
+        </Route>
+      </Switch>
 
-      {/* <Slideshow /> */}
-      {/* <FormImage/> */}
+      {/* <MainHeader /> */}
+      {/* <CreateAccount /> */}
       {/* <SignIn /> */}
-      <CreateAccount />
+      {/* <Home /> */}
 
-      {/* Footer */}
-      {/* <MainFooter /> */}
+      {/* <MiniMap /> */}
     </>
   )
 }

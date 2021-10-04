@@ -27,7 +27,7 @@
   z-index: 1;
 }
 
-img {
+.slide-image {
   width: 600px;
   // width: 1366px;
   // max-width: 100%;
@@ -39,7 +39,7 @@ img {
 }
 
 // Styling for if image link is broken
-img::before {
+.slide-image::before {
   background-color: hsl(0, 0%, 93.3%);
   border: 1px dashed hsl(0, 0%, 66.7%);
   height: 100%;
@@ -50,7 +50,7 @@ img::before {
   border-radius: 4px;
 }
 
-img::after {
+.slide-image::after {
   content: attr(alt);
   font-weight: bold;
   position: absolute;
@@ -61,7 +61,7 @@ img::after {
   width: 100%;
 }
 
-img[alt] {
+.slide-image[alt] {
   text-align: center;
   font-weight: bold;
   color: hsl(0, 0%, 60%);

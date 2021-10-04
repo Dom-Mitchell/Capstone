@@ -1,26 +1,30 @@
 import React from 'react'
 import { FormImage } from '../components/FormImage'
+import { MainHeader } from '../components/MainHeader'
 import { RelativeFooter } from '../components/RelativeFooter'
+import { Link } from 'react-router-dom'
 // import title from '../images/title.png'
 import user from '../images/form/green-user.svg'
 import envelope from '../images/form/envelope.svg'
 import lock from '../images/form/lock.svg'
-import '../css/createAccount.scss'
+import createAccount from '../css/createAccount.module.scss'
 
 export function CreateAccount() {
+  // const [value, setValue] = useState('')
+
   return (
     <>
-      <div className="form-container">
-        <div className="form-image-container">
+      <MainHeader />
+      <div className={createAccount['form-container']}>
+        <div className={createAccount['form-image-container']}>
           <FormImage />
         </div>
 
-        {/* <div className="sign-in"> */}
-        <div className="sign-in-container">
-          <div className="sign-in-content">
+        <div className={createAccount['sign-in-container']}>
+          <div className={createAccount['sign-in-content']}>
             <nav>
               {/* Change this later at some point... */}
-              <a href="#">
+              <Link to="/">
                 <svg
                   version="1.1"
                   id="Home"
@@ -143,66 +147,90 @@ export function CreateAccount() {
                   <g></g>
                   <g></g>
                 </svg>
-              </a>
+              </Link>
               <h1>Create Account</h1>
             </nav>
 
-            <form action="#">
+            <form
+              onSubmit={function (event) {
+                event.preventDefault()
+
+                // if (input.length < 1) {
+                // }
+              }}
+            >
               <div
-                className="form-input validate-form-input"
+                className={`${createAccount['form-input']} ${createAccount['validate-form-input']}`}
                 data-validate="Name is required"
               >
                 <input
-                  className="form-name"
+                  className={createAccount['form-name']}
                   type="text"
                   name="name"
                   placeholder="Full Name"
                 />
-                <span className="focus-name"></span>
-                <span className="name-icon">
-                  <img className="green-user" src={user} aria-hidden="true" />
+                <span className={createAccount['focus-name']}></span>
+                <span className={createAccount['name-icon']}>
+                  <img
+                    className={createAccount['green-user']}
+                    src={user}
+                    aria-hidden="true"
+                  />
                 </span>
               </div>
 
               <div
-                className="form-input validate-form-input"
+                className={`${createAccount['form-input']} ${createAccount['validate-form-input']}`}
                 data-validate="Valid email is required: ex@abc.xyz"
               >
                 <input
-                  className="form-email"
+                  className={createAccount['form-email']}
                   type="email"
                   name="email"
                   placeholder="Email"
                 />
-                <span className="focus-email"></span>
-                <span className="email-icon">
-                  <img className="envelope" src={envelope} aria-hidden="true" />
+                <span className={createAccount['focus-email']}></span>
+                <span className={createAccount['email-icon']}>
+                  <img
+                    className={createAccount.envelope}
+                    src={envelope}
+                    aria-hidden="true"
+                  />
                 </span>
               </div>
 
               <div
-                className="form-input validate-form-input"
+                className={`${createAccount['form-input']} ${createAccount['validate-form-input']}`}
                 data-validate="Password is required"
               >
                 <input
-                  className="form-password"
+                  className={createAccount['form-password']}
                   type="password"
                   name="password"
                   placeholder="Password"
                 />
-                <span className="focus-password"></span>
-                <span className="password-icon">
-                  <img className="lock" src={lock} aria-hidden="true" />
+                <span className={createAccount['focus-password']}></span>
+                <span className={createAccount['password-icon']}>
+                  <img className={createAccount.lock} src={lock} aria-hidden="true" />
                 </span>
               </div>
 
-              <button className="sign-in-button" type="submit">
-                <p>Sign In</p>
+              <button
+                className={createAccount['sign-in-button']}
+                type="submit"
+                onSubmit={function (event) {
+                  event.preventDefault()
+                }}
+              >
+                <p>Create Account</p>
               </button>
               {/* Change this later... */}
-              <a className="create-account-page-button" href="#">
-                <button>Create Account</button>
-              </a>
+              <Link
+                className={createAccount['create-account-page-button']}
+                to="/signin"
+              >
+                <button>Sign In</button>
+              </Link>
             </form>
           </div>
         </div>

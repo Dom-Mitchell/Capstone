@@ -1,7 +1,7 @@
 import React from 'react'
 import '../css/absoluteFooter.scss'
 
-export function MainFooter() {
+export function AbsoluteFooter() {
   return (
     <>
       <footer>
