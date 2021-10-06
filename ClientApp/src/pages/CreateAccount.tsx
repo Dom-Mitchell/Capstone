@@ -20,8 +20,8 @@ export function CreateAccount() {
           <FormImage />
         </div>
 
-        <div className={createAccount['sign-in-container']}>
-          <div className={createAccount['sign-in-content']}>
+        <div className={createAccount['create-account-container']}>
+          <div className={createAccount['create-account-content']}>
             <nav>
               {/* Change this later at some point... */}
               <Link to="/">
@@ -211,12 +211,16 @@ export function CreateAccount() {
                 />
                 <span className={createAccount['focus-password']}></span>
                 <span className={createAccount['password-icon']}>
-                  <img className={createAccount.lock} src={lock} aria-hidden="true" />
+                  <img
+                    className={createAccount.lock}
+                    src={lock}
+                    aria-hidden="true"
+                  />
                 </span>
               </div>
 
               <button
-                className={createAccount['sign-in-button']}
+                className={createAccount['create-account-button']}
                 type="submit"
                 onSubmit={function (event) {
                   event.preventDefault()
@@ -226,7 +230,7 @@ export function CreateAccount() {
               </button>
               {/* Change this later... */}
               <Link
-                className={createAccount['create-account-page-button']}
+                className={createAccount['sign-in-page-button']}
                 to="/signin"
               >
                 <button>Sign In</button>

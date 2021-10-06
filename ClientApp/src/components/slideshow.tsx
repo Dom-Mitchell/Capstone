@@ -16,6 +16,8 @@ export function Slideshow() {
     }
   }, [slideCount])
 
+  const dots = [0, 1, 2]
+
   return (
     <>
       <div className={slideShow['slideshow-container']}>
@@ -61,15 +63,16 @@ export function Slideshow() {
 
       <div className={slideShow['slide-dots']}>
         {/* {`${signIn['form-input']} ${signIn['validate-form-input']}`} */}
-        <span
-          className={`${slideIndex === 0} ? ${slideShow['slide-dot']} ${slideShow['slide-active']} : ${slideShow['slide-dot']}}`}
-        ></span>
-        <span
-          className={slideIndex === 1 ? 'slide-dot slide-active' : 'slide-dot'}
-        ></span>
-        <span
-          className={slideIndex === 2 ? 'slide-dot slide-active' : 'slide-dot'}
-        ></span>
+        {dots.map((dot) => (
+          <span
+            key={dot}
+            className={
+              slideIndex === dot
+                ? `${slideShow['slide-dot']} ${slideShow['slide-active']}`
+                : slideShow['slide-dot']
+            }
+          ></span>
+        ))}
       </div>
     </>
   )

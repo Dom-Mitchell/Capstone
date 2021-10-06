@@ -13,6 +13,9 @@
     "statusBar.debuggingForeground": "#1857a4",
     "statusBar.foreground": "#1857a4",
     "statusBarItem.hoverBackground": "#4089e2",
-    "tab.activeBorder": "#1f6fd0"
+    "tab.activeBorder": "#1f6fd0",
+    "sash.hoverBorder": "#1f6fd0",
+    "statusBarItem.remoteBackground": "#1f6fd0",
+    "statusBarItem.remoteForeground": "#1857a4"
   }
 }

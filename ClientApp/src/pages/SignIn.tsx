@@ -153,7 +153,8 @@ export function SignIn() {
               onSubmit={function (event) {
                 event.preventDefault()
 
-                // if (input.length < 1) {
+                // if (input.length === 0) {
+                // {signIn['validate-form-input']} display
                 // }
               }}
             >
