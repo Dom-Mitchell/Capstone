@@ -6,7 +6,7 @@ import { Home } from './pages/Home'
 // import { MainHeader } from './components/MainHeader'
 import { MiniMap } from './pages/MiniMap'
 import { Map } from './pages/Map'
-import { Park } from './pages/Park'
+// import { Park } from './pages/Park'
 import { MtRainier } from './pages/MtRainier'
 
 export function App() {
