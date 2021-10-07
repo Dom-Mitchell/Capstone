@@ -1,6 +1,10 @@
 // import React, { useContext } from 'react'
 // import { FormContext } from './form'
 
+export function FormInput() {
+  console.log('testing...')
+}
+
 // export function FormInput(props: {
 //   label: any
 //   type?: 'text' | undefined
@@ -23,3 +27,4 @@
 //     </div>
 //   )
 // }
+

@@ -1,5 +1,9 @@
 // import React, { useState } from 'react';
 
+export function FormContext() {
+  console.log('testing...')
+}
+
 // export const FormContext = React.createContext({
 //   form: {}
 // });
