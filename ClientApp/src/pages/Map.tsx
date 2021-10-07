@@ -1,22 +1,24 @@
 import React, { useState } from 'react'
 import { MainHeader } from '../components/MainHeader'
+// import { AbsoluteFooter } from '../components/AbsoluteFooter'
+// import { RelativeFooter } from '../components/RelativeFooter'
 import { Link } from 'react-router-dom'
-import title from '../images/title.png'
+// import title from '../images/title.png'
 import pin from '../images/map/visitedPark.png'
 import fullScreen from '../images/map/full-screen2.svg'
-import '../css/miniMap.scss'
+import '../css/map.scss'
 // import { ParkType } from '../types'
 import ReactMapGL, { Marker, NavigationControl } from 'react-map-gl'
 import { ParkType } from '../types'
 import { useQuery } from 'react-query'
 
-export function MiniMap() {
+export function Map() {
   // const [value, setValue] = useState('')
 
   const [viewport, setViewport] = useState({
     latitude: 39.8283,
     longitude: -98.5795,
-    zoom: 2,
+    zoom: 3.75,
   })
 
   const { data: parks = [] } = useQuery<ParkType[]>(
@@ -31,14 +33,11 @@ export function MiniMap() {
 
   const MAPBOX_TOKEN = import.meta.env.VITE_APP_MAPBOX_TOKEN as string
 
+  // const [selectedMapPark, setSelectedMapPark] = useState<ParkType | null>(null)
+
   return (
     <>
       <MainHeader />
-      <div className="project-title-container">
-        <div className="project-title">
-          <img src={title} />
-        </div>
-      </div>
 
       <div className="map-container">
         <ReactMapGL
@@ -46,6 +45,7 @@ export function MiniMap() {
           style={{ position: 'absolute' }}
           width="100%"
           height="100%"
+          mapStyle="mapbox://styles/mapbox/streets-v11"
           mapboxApiAccessToken={MAPBOX_TOKEN}
           onViewportChange={setViewport}
         >
@@ -53,11 +53,33 @@ export function MiniMap() {
             <NavigationControl />
           </div>
 
-          <div className="full-screen-container">
-            <Link to="/">
+          <div className="mt-rainier">
+            <Link to="/mtRainier">***************</Link>
+          </div>
+
+          <div className="shrink-screen-container">
+            <Link to="/miniMap">
               <img src={fullScreen} />
             </Link>
           </div>
+
+          {/* {selectedMapRestaurant ? ( */}
+          {/* <Popup
+            latitude={selectedMapPark!.latitude}
+            longitude={selectedMapPark!.longitude}
+            closeButton={true}
+            closeOnClick={false}
+            onClose={() => setSelectedMapPark(null)}
+            offsetTop={-5}
+          >
+            <div className="map-popup-park">
+              <p>
+                <Link to="/mtRainier">MT. Rainier</Link>
+              </p> */}
+          {/* <p>{selectedMapRestaurant.description}</p> */}
+          {/* </div> */}
+          {/* </Popup> */}
+          {/* ) : null} */}
 
           {parks.map((park) => (
             <Marker
@@ -70,7 +92,6 @@ export function MiniMap() {
           ))}
         </ReactMapGL>
       </div>
-
     </>
   )
 }

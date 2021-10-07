@@ -3,8 +3,11 @@ import { SignIn } from './pages/SignIn'
 import { CreateAccount } from './pages/CreateAccount'
 import { Route, Switch } from 'react-router'
 import { Home } from './pages/Home'
-import { MainHeader } from './components/MainHeader'
+// import { MainHeader } from './components/MainHeader'
 import { MiniMap } from './pages/MiniMap'
+import { Map } from './pages/Map'
+import { Park } from './pages/Park'
+import { MtRainier } from './pages/MtRainier'
 
 export function App() {
   return (
@@ -25,6 +28,18 @@ export function App() {
         <Route exact path="/createaccount">
           <CreateAccount />
         </Route>
+        <Route exact path="/miniMap">
+          <MiniMap />
+        </Route>
+        <Route exact path="/map">
+          <Map />
+        </Route>
+        {/* <Route exact path="/parks:id">
+          <Park />
+        </Route> */}
+        <Route exact path="/mtRainier">
+          <MtRainier />
+        </Route>
       </Switch>
 
       {/* <MainHeader /> */}
@@ -32,7 +47,8 @@ export function App() {
       {/* <SignIn /> */}
       {/* <Home /> */}
 
-      {/* <MiniMap /> */}
+      {/* <Map /> */}
+      {/* <MtRainier /> */}
     </>
   )
 }

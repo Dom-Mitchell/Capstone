@@ -8,10 +8,6 @@
   transform: translate(160px, 95px);
 }
 
-.mapboxgl-ctrl-group button.mapboxgl-ctrl-compass {
-  cursor: pointer;
-}
-
 .project-title {
   background-color: #fffde4;
   width: max-content;
@@ -19,7 +15,7 @@
   margin: 20px;
 }
 
-.map-container {
+.mini-map-container {
   margin: 3rem;
   border-image-source: url('../images/map/map-border.svg');
   border-image-slice: 10% 8% 10% 8% fill;
@@ -63,7 +59,7 @@
   height: 50px;
 }
 
-.pin {
+.mini-map-pin {
   height: 30px;
   width: 30px;
 }

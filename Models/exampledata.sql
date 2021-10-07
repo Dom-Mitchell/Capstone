@@ -8,6 +8,7 @@ INSERT INTO "Parks" ("Name", "Latitude", "Longitude") VALUES ('Acadia', 44.35, -
 INSERT INTO "Parks" ("Name", "Latitude", "Longitude") VALUES ('American Samoa', -14.25, -170.68);
 INSERT INTO "Parks" ("Name", "Latitude", "Longitude") VALUES ('Arches', 38.68, -109.57);
 INSERT INTO "Parks" ("Name", "Latitude", "Longitude") VALUES ('Badlands', 43.75, -102.5);
+INSERT INTO "Parks" ("Name", "Latitude", "Longitude") VALUES ('Mount. Rainier', 46.85, -121.75);
 
 INSERT INTO "Visits" ("ParkId", "VisitedAt", "TravelCompanions", "Summary", "LikeDislike", "UserId") VALUES (1, '2020-01-01 14:23:55', 'Sarah', 'Lorem ipsum', true, 1);
 INSERT INTO "Visits" ("ParkId", "VisitedAt", "TravelCompanions", "Summary", "LikeDislike", "UserId") VALUES (1, '2020-01-01 18:23:55', 'Mary', 'Lorem ipsum', true, 1);

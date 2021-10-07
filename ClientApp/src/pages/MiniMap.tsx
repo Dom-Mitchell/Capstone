@@ -42,12 +42,13 @@ export function MiniMap() {
         </div>
       </div>
 
-      <div className="map-container">
+      <div className="mini-map-container">
         <ReactMapGL
           {...viewport}
           style={{ position: 'absolute' }}
           width="100%"
           height="100%"
+          mapStyle="mapbox://styles/mapbox/streets-v11"
           mapboxApiAccessToken={MAPBOX_TOKEN}
           onViewportChange={setViewport}
         >
@@ -56,7 +57,7 @@ export function MiniMap() {
           </div>
 
           <div className="full-screen-container">
-            <Link to="/">
+            <Link to="/map">
               <img src={fullScreen} />
             </Link>
           </div>

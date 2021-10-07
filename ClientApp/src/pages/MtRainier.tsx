@@ -1,22 +1,21 @@
 import React from 'react'
-import { FormImage } from '../components/FormImage'
+// import { FormImage } from '../components/FormImage'
 import { MainHeader } from '../components/MainHeader'
 import { RelativeFooter } from '../components/RelativeFooter'
 import { Link } from 'react-router-dom'
 // import title from '../images/title.png'
-import envelope from '../images/form/envelope.svg'
-import lock from '../images/form/lock.svg'
-import signIn from '../css/signIn.module.scss'
+// import envelope from '../images/form/envelope.svg'
+// import lock from '../images/form/lock.svg'
+import people from '../images/people.svg'
+import notebook from '../images/notebook.svg'
+import signIn from '../css/mountRainier.module.scss'
+import MountRainier from '../images/mt-rainier.png'
 
-export function SignIn() {
+export function MtRainier() {
   return (
     <>
       <MainHeader />
       <div className={signIn['form-container']}>
-        <div className={signIn['form-image-container']}>
-          <FormImage />
-        </div>
-
         {/* <div className="sign-in"> */}
         <div className={signIn['sign-in-container']}>
           <div className={signIn['sign-in-content']}>
@@ -146,7 +145,7 @@ export function SignIn() {
                   <g></g>
                 </svg>
               </Link>
-              <h1>Sign In</h1>
+              <h1>Mt Rainier</h1>
             </nav>
 
             <form
@@ -158,62 +157,66 @@ export function SignIn() {
                 // }
               }}
             >
+              {/* ${signIn['validate-form-input']} */}
               <div
-                className={`${signIn['form-input']} ${signIn['validate-form-input']}`}
-                data-validate="Valid email is required: ex@abc.xyz"
+                className={`${signIn['form-input']} `}
+                // data-validate="Valid email is required: ex@abc.xyz"
               >
                 <input
                   className={signIn['form-email']}
-                  type="email"
-                  name="email"
-                  placeholder="Email"
+                  type="text"
+                  name="text"
+                  placeholder="Description"
                 />
                 <span className={signIn['focus-email']}></span>
                 <span className={signIn['email-icon']}>
                   <img
-                    className={signIn.envelope}
-                    src={envelope}
+                    className={signIn.lock}
+                    src={notebook}
                     aria-hidden="true"
                   />
                 </span>
               </div>
 
+              {/* ${signIn['validate-form-input']} */}
               <div
-                className={`${signIn['form-input']} ${signIn['validate-form-input']}`}
-                data-validate="Password is required"
+                className={`${signIn['form-input']} `}
+                // data-validate="Password is required"
               >
                 <input
                   className={signIn['form-password']}
-                  type="password"
-                  name="password"
-                  placeholder="Password"
+                  type="text"
+                  name="text"
+                  placeholder="Travel Companions"
                 />
                 <span className={signIn['focus-password']}></span>
                 <span className={signIn['password-icon']}>
-                  <img className={signIn.lock} src={lock} aria-hidden="true" />
+                  <img
+                    className={signIn.envelope}
+                    src={people}
+                    aria-hidden="true"
+                  />
                 </span>
               </div>
 
               {/* <button className={signIn['sign-in-button']} type="submit">
                 <p>Sign In</p>
               </button> */}
-              <Link
-                className={signIn['sign-in-button']}
-                to="/miniMap"
-              >
+              {/* <Link className={signIn['sign-in-button']} to="/miniMap">
                 <button>Sign In</button>
-              </Link>
+              </Link> */}
               {/* Change this later... */}
-              <Link
-                className={signIn['create-account-page-button']}
-                to="/createaccount"
-              >
-                <button>Create Account</button>
+              <Link className={signIn['create-account-page-button']} to="/map">
+                <button>Submit</button>
               </Link>
             </form>
           </div>
         </div>
       </div>
+      <div className={signIn['park-logo']}>
+        <img src={MountRainier} />
+      </div>
+
       <RelativeFooter />
     </>
   )
